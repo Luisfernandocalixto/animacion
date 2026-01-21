@@ -11,7 +11,7 @@ function startDrag(event) {
     if (!actualCard) return;
 
     // get initial position of mouse or finger
-    const startX = event.pageX ?? event.touches[0].pageX
+    const startX = event.pageX ?? event.touches[0].pageX;
 
     document.addEventListener('mousemove', onMove);
     document.addEventListener('mouseup', onEnd);
@@ -61,7 +61,7 @@ function startDrag(event) {
         document.removeEventListener('touchend', onEnd);
 
         // user take of card or else not 
-        const decisionMade = Math.abs(pullDeltaX) >= DECISION_THRESHOLD
+        const decisionMade = Math.abs(pullDeltaX) >= DECISION_THRESHOLD;
         if (decisionMade) {
             const goRight = pullDeltaX >= 0;
 
@@ -90,7 +90,7 @@ function startDrag(event) {
 
         actualCard
             .querySelectorAll('.choice')
-            .forEach((el) => (el.style.opacity = 0))
+            .forEach((el) => (el.style.opacity = 0));
 
     }
 }
